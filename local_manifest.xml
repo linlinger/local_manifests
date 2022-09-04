@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+ <!--Remote-->
+ <remote name="linlinger" fetch="https://github.com/linlinger" />
+ <remote name="LineageOS" fetch="https://github.com/LineageOS" />
+ <remote name="PixelExperience" fetch="https://github.com/PixelExperience" />
+ <remote name="kdrag0n" fetch="https://github.com/kdrag0n" />
+ 
+ <!--Trees-->
+ <project path="device/xiaomi/mido" name="device_xiaomi_mido" remote="linlinger" revision="kscope-sunflowerleaf" />
+ <project path="vendor/xiaomi/mido" name="vendor_xiaomi_mido" remote="linlinger" revision="twelve" />
+ <project path="kernel/xiaomi/mido" name="kernel_xiaomi_mido-1" remote="linlinger" revision="twelve" />
+ 
+ <!-- Proton -->
+ <project path="prebuilts/clang/host/linux-x86/proton-clang" name="proton-clang" remote="kdrag0n" revision="master" depth="1" />
+</manifest>
