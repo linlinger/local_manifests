@@ -7,7 +7,7 @@
  <remote name="kdrag0n" fetch="https://github.com/kdrag0n" />
  
  <!--Trees-->
- <project path="device/xiaomi/mido" name="device_xiaomi_mido" remote="linlinger" revision="kscope-sunflowerleaf" />
+ <project path="device/xiaomi/mido" name="device_xiaomi_mido" remote="linlinger" revision="Evolution-tiramisu" />
  <project path="vendor/xiaomi/mido" name="vendor_xiaomi_mido" remote="linlinger" revision="twelve" />
  <project path="kernel/xiaomi/mido" name="kernel_xiaomi_mido-1" remote="linlinger" revision="twelve" />
  
