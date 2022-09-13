@@ -7,9 +7,9 @@
  <remote name="kdrag0n" fetch="https://github.com/kdrag0n" />
  
  <!--Trees-->
- <project path="device/xiaomi/mido" name="device_xiaomi_mido" remote="linlinger" revision="kscope-sunflowerleaf" />
- <project path="vendor/xiaomi/mido" name="vendor_xiaomi_mido" remote="linlinger" revision="twelve" />
- <project path="kernel/xiaomi/mido" name="kernel_xiaomi_mido-1" remote="linlinger" revision="twelve" />
+ <project path="device/xiaomi/mido" name="device_xiaomi_mido" remote="linlinger" revision="AOSP-13.0" />
+ <project path="vendor/xiaomi/mido" name="vendor_xiaomi_mido" remote="linlinger" revision="AOSP-13.0" />
+ <project path="kernel/xiaomi/mido" name="kernel_xiaomi_mido-1" remote="linlinger" revision="AOSP-13.0" />
  
  <!-- Proton -->
  <project path="prebuilts/clang/host/linux-x86/proton-clang" name="proton-clang" remote="kdrag0n" revision="master" depth="1" />
