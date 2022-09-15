@@ -13,7 +13,7 @@
  <project path="kernel/xiaomi/mido" name="kernel_xiaomi_mido-1" remote="linlinger" revision="AOSP-13.0" />
  
  <!-- External -->
-  <project path="external/json-c" name="external_json-c" revision="lineage-19.1" remote="LineageOS" />
+  <project path="external/json-c" name="external_json-c" revision="lineage-19.1" remote="githubgl" />
 
   <!-- Devicesettings -->>
 <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" revision="lineage-19.1" remote="LineageOS" />
@@ -21,16 +21,16 @@
 
   <!-- Beginning of added projects from Lineage or Qualcomm (CAF) -->
   <!-- Sepolicy -->
-  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" revision="lineage-19.1" remote="LineageOS" />
-  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy" revision="lineage-19.1-legacy-um" remote="LineageOS"  />
+  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" revision="gl/lineage-19.1" remote="githubgl" />
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy" revision="gl/lineage-19.1-legacy-um" remote="githubgl"  />
 
   <!-- Hardware -->
-  <project path="hardware/qcom-caf/bt" name="hardware_qcom-caf_bt" revision="lineage-19.1-caf" remote="LineageOS" />
+  <project path="hardware/qcom-caf/bt" name="hardware_qcom-caf_bt" revision="lineage-19.1-caf" remote="githubgl" />
 
   <!-- This is an hack to circumvent some security policies from Google: put the wlan hal from Qualcomm in hardware/qcom/wlan -->
   <remove-project name="platform/hardware/qcom/wlan" />
-  <project path="hardware/qcom/wlan" name="hardware_qcom-caf_wlan" revision="lineage-19.1-caf" remote="LineageOS" />
-  <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" revision="lineage-19.1" remote="LineageOS" >
+  <project path="hardware/qcom/wlan" name="hardware_qcom-caf_wlan" revision="gl/lineage-19.1-caf" remote="githubgl" />
+  <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" revision="lineage-19.1" remote="githubgl" >
     <!-- Add guard for AOSP hardware/qcom directory. -->
     <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/msm8953/Android.bp" />
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8953/Android.mk" />
@@ -39,27 +39,26 @@
   <project path="hardware/qcom-caf/msm8953/audio" name="android_hardware_qcom_audio" groups="qcom,msm8953" revision="lineage-19.1-caf-msm8953" remote="LineageOS" />
   <project path="hardware/qcom-caf/msm8953/display" name="android_hardware_qcom_display" groups="qcom" revision="lineage-19.1-caf-msm8953" remote="LineageOS" />
   <project path="hardware/qcom-caf/msm8953/media" name="android_hardware_qcom_media" groups="qcom,msm8953" revision="lineage-19.1-caf-msm8953" remote="LineageOS" />
-  <project path="hardware/qcom-caf/vr" name="hardware_qcom-caf_vr" revision="lineage-19.1" remote="LineageOS" />
+  <project path="hardware/qcom-caf/vr" name="hardware_qcom-caf_vr" revision="lineage-19.1" remote="githubgl" />
 
-  <project path="prebuilts/tools-lineage" name="android_prebuilts_tools-lineage" revision="lineage-19.1" remote="LineageOS" />
+  <project path="prebuilts/tools-lineage" name="android_prebuilts_tools-lineage" revision="lineage-19.1" remote="githubgl" />
 
   <!-- Vendor -->
-  <project path="vendor/codeaurora/telephony" name="vendor_codeaurora_telephony" revision="lineage-19.1" remote="LineageOS" />
-  <project path="vendor/qcom/opensource/audio" name="vendor_qcom_opensource_audio" revision="lineage-19.1" remote="LineageOS" />
-  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="android_vendor_qcom_opensource_data-ipa-cfg-mgr" revision="gl/lineage-19.1" remote="LineageOS" />
-  <project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" revision="gl/lineage-19.1" remote="LineageOS" />
-  <project path="vendor/qcom/opensource/interfaces" name="vendor_qcom_opensource_interfaces" revision="lineage-19.1" remote="LineageOS" />
-  <project path="vendor/qcom/opensource/power" name="vendor_qcom_opensource_power" revision="lineage-19.1" remote="LineageOS" />
-  <project path="vendor/qcom/opensource/thermal-engine" name="android_vendor_qcom_opensource_thermal-engine" revision="master" remote="LineageOS" />
+  <project path="vendor/codeaurora/telephony" name="vendor_codeaurora_telephony" revision="lineage-19.1" remote="githubgl" />
+  <project path="vendor/qcom/opensource/audio" name="vendor_qcom_opensource_audio" revision="lineage-19.1" remote="githubgl" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="android_vendor_qcom_opensource_data-ipa-cfg-mgr" revision="gl/lineage-19.1" remote="githubgl" />
+  <project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" revision="gl/lineage-19.1" remote="githubgl" />
+  <project path="vendor/qcom/opensource/interfaces" name="vendor_qcom_opensource_interfaces" revision="lineage-19.1" remote="githubgl" />
+  <project path="vendor/qcom/opensource/power" name="vendor_qcom_opensource_power" revision="lineage-19.1" remote="githubgl" />
+  <project path="vendor/qcom/opensource/thermal-engine" name="android_vendor_qcom_opensource_thermal-engine" revision="master" remote="githubgl" />
   <project path="vendor/qcom/opensource/commonsys-intf/display" name="android_vendor_qcom_opensource_display-commonsys-intf" revision="lineage-19.1" remote="LineageOS" />
-  <project path="vendor/qcom/opensource/commonsys-intf/display" name="android_vendor_qcom_opensource_display-commonsys-intf" groups="qcom,qssi" remote="LineageOS" />
-  <!-- <project path="vendor/qcom/opensource/fm-commonsys" name="android_vendor_qcom_opensource_fm-commonsys" groups="qcom,qssi" remote="LineageOS" remote="LineageOS" /> -->
+  <!-- <project path="vendor/qcom/opensource/fm-commonsys" name="android_vendor_qcom_opensource_fm-commonsys" groups="qcom,qssi" remote="LineageOS" /> -->
 
   <!-- Google projects -->
   <project path="external/tinyxml" name="platform/external/tinyxml" groups="pdk" remote="aosp" revision="refs/tags/android-11.0.0_r46" />
 
   <!-- SimpleDeviceConfig -->
-  <project path="packages/apps/SimpleDeviceConfig" name="packages_apps_SimpleDeviceConfig" revision="12.1" remote="LineageOS" />
+  <project path="packages/apps/SimpleDeviceConfig" name="packages_apps_SimpleDeviceConfig" revision="12.1" remote="githubgl" />
 
  <!-- Proton -->
  <project path="prebuilts/clang/host/linux-x86/proton-clang" name="proton-clang" remote="kdrag0n" revision="master" depth="1" />
