@@ -40,9 +40,11 @@
       移除 PixelOS 默认的 DolbyAtmos, 其 preinstalled-packages-platform-dolby.xml
       与 LunarisDolby 模块撞名 (soong 解析期冲突)
       vendor 仓库 fork: LunarisDolbyOverlay 去掉 com.crdroid.apps.resources 依赖
-      (crdroid 共享 RRO 资源库, PixelOS 树里不存在; overlay res 并未引用它) -->
+      (crdroid 共享 RRO 资源库, PixelOS 树里不存在; overlay res 并未引用它)
+      app 仓库 fork: 上游 81ea5c1 把 strings 搬进 com.crdroid.apps.resources
+      (本树不存在该模块), revert 见 ef020f7, 走 linlinger/17.0 -->
  <remove-project name="PixelOS-AOSP/android_packages_apps_DolbyAtmos" />
- <project path="packages/apps/LunarisDolby" name="android_packages_apps_LunarisDolby" remote="crd" revision="17.0" />
+ <project path="packages/apps/LunarisDolby" name="android_packages_apps_LunarisDolby" remote="linlinger" revision="17.0" />
  <project path="vendor/oneplus/dolby" name="proprietary_vendor_oneplus_dolby" remote="linlinger" revision="17.0" />
 
  <!-- OplusRefreshRate vendor 版刷新率调度 (linlinger 自研, 装入 /vendor/priv-app)
