@@ -49,4 +49,9 @@
       需在 device.mk 里 PRODUCT_PACKAGES += OplusRefreshRateVendor 才会编译进 ROM -->
  <project path="vendor/oneplus/refreshrate" name="PJA110-RefreshRateVendor" remote="linlinger" revision="main" />
 
+ <!-- OnePlus Camera (com.oplus.camera, ColorOS 提取, 方案 B 精简移植)
+      presigned APK → /product/priv-app + 5 条 signature|privileged 白名单,
+      算法库 → /product/lib64, 与 LineageOS Aperture 共存 -->
+ <project path="vendor/oneplus/opluscamera" name="PJA110-OplusCamera" remote="linlinger" revision="main" />
+
 </manifest>
