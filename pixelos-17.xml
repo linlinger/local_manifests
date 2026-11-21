@@ -51,7 +51,10 @@
 
  <!-- OnePlus Camera (com.oplus.camera, ColorOS 提取, 方案 B 精简移植)
       presigned APK → /product/priv-app + 5 条 signature|privileged 白名单,
-      算法库 → /product/lib64, 与 LineageOS Aperture 共存 -->
- <project path="vendor/oneplus/opluscamera" name="PJA110-OplusCamera" remote="linlinger" revision="main" />
+      算法库 → /product/lib64, 与 LineageOS Aperture 共存
+      注意: 不走 manifest (repo checkout 与 LFS 仓库冲突, unsupported checkout
+      state), 手动放置:
+        git clone https://github.com/linlinger/PJA110-OplusCamera /android/src/PixelOS/vendor/oneplus/opluscamera
+      (或直接拷贝文件) -->
 
 </manifest>
